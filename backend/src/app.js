@@ -6,4 +6,13 @@ const app= express();
 
 app.set('port', process.env.PORT || 4000);
 
+//midlewares
+app.use(cors());
+app.use(express.json());
+
+//rutas 
+app.get('/',(req,res)=>{
+    res.send('Bienvenido a mi API RESTful');
+});
+
 module.exports = app;
