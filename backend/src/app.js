@@ -15,4 +15,8 @@ app.get('/',(req,res)=>{
     res.send('Bienvenido a mi API RESTful');
 });
 
+//ruta para nuestra api de usuarios
+
+app.use('/api/usuarios', require('./routes/usuario.js'));
+
 module.exports = app;

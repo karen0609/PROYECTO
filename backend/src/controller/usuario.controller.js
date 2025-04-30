@@ -35,11 +35,12 @@ usuarioCtrl.updateUsu = async (req, res) =>
         const { nombre, apellido, email, edad, telefono } = req.body;
         await Usuario.findByIdAndUpdate(req.params.id, 
             {
-                nombre, 
-                apellido, 
-                email,
-                edad, 
-                telefono 
+                nombre:nombre, 
+                apellido:apellido, 
+                email:email,
+                edad:edad, 
+                telefono:telefono 
             });
         res.json({message: 'El usuario ha sido actualizado'});                         
     }
+ module.exports = usuarioCtrl;
